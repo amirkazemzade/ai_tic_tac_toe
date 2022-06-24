@@ -1,10 +1,12 @@
-import players.Player
 import game.Shape
 import game.Table
 import players.Human
 import java.util.*
 
-fun main(args: Array<String>) {
+/**
+ * this function runs a game between two Human players
+ */
+fun main() {
     val reader = Scanner(System.`in`)
     print("player 1 name with shape X: ")
     val name1 = reader.next()
