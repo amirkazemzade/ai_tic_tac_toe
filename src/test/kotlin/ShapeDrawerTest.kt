@@ -1,5 +1,5 @@
 import game.Shape
-import game.ShapeDrawer
+import game.getChar
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -8,18 +8,18 @@ internal class ShapeDrawerTest {
     @Test
     fun testDrawCross() {
         val expected = 'X'
-        assertEquals(expected, ShapeDrawer.getChar(Shape.CROSS))
+        assertEquals(expected, Shape.CROSS.getChar())
     }
 
     @Test
     fun testDrawCircle() {
         val expected = 'O'
-        assertEquals(expected, ShapeDrawer.getChar(Shape.CIRCLE))
+        assertEquals(expected, Shape.CIRCLE.getChar())
     }
 
     @Test
     fun testDrawNone() {
         val expected = ' '
-        assertEquals(expected, ShapeDrawer.getChar(Shape.NONE))
+        assertEquals(expected, Shape.NONE.getChar())
     }
 }

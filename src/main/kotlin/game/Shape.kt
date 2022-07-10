@@ -1,15 +1,20 @@
 package game
 
+/**
+ * an enum that has the possible shapes of a cell in the game
+ */
 enum class Shape { CROSS, CIRCLE, NONE }
 
-class ShapeDrawer {
-    companion object {
-        fun draw(shape: Shape) = print(getChar(shape))
+/**
+ * an extension function for [Shape] that prints the shape
+ */
+fun Shape.draw() = print(this.getChar())
 
-        fun getChar(shape: Shape): Char = when (shape) {
-            Shape.CROSS -> 'X'
-            Shape.CIRCLE -> 'O'
-            else -> ' '
-        }
-    }
+/**
+ * an extension function for [Shape] that returns the char of the shape
+ */
+fun Shape.getChar(): Char = when (this) {
+    Shape.CROSS -> 'X'
+    Shape.CIRCLE -> 'O'
+    else -> ' '
 }
